@@ -1,0 +1,24 @@
+{
+  "name": "hapi-bookshelf",
+  "version": "0.0.0",
+  "description": "Hapi plugin for working with Bookshelf promises",
+  "main": "index.js",
+  "scripts": {
+    "test": "lab test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/valet-io/hapi-bookshelf"
+  },
+  "keywords": [
+    "hapi",
+    "bookshelf",
+    "promises"
+  ],
+  "author": "Ben Drucker <bvdrucker@gmail.com> (http://www.bendrucker.me/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/valet-io/hapi-bookshelf/issues"
+  },
+  "homepage": "https://github.com/valet-io/hapi-bookshelf"
+}
