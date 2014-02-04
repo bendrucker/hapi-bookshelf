@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+- '0.10'
+deploy:
+  provider: npm
+  email: bvdrucker@gmail.com
+  api_key:
+    secure: EafY9DoxD/M5l+vEJRWmncN2TnfigTenKYe8+A1+gDXKXpQ+y0+Na1oQe3jvaoASuoUru5vBNUkHfEzqOxgqlBgy1vrC9Iy7DD8Gy9s6nof1PjB5oHJavXP/uLq+YvHIHd5oP6DqcRea25zNbIgSqJfyiV2f2lUdxx6qSXSTSpg=
+  on:
+    tags: true
+    repo: valet-io/hapi-bookshelf

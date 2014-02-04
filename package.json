@@ -20,5 +20,13 @@
   "bugs": {
     "url": "https://github.com/valet-io/hapi-bookshelf/issues"
   },
-  "homepage": "https://github.com/valet-io/hapi-bookshelf"
+  "homepage": "https://github.com/valet-io/hapi-bookshelf",
+  "devDependencies": {
+    "lab": "~1.5.0",
+    "hapi": "~2.1.2",
+    "bookshelf": "valet-io/bookshelf#161c4ad876f0d9977cb5bc68b324e44c8c0cc88c"
+  },
+  "peerDependencies": {
+    "bookshelf": "0.x"
+  }
 }
