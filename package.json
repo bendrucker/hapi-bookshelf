@@ -1,6 +1,6 @@
 {
   "name": "hapi-bookshelf",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Hapi plugin for working with Bookshelf promises",
   "main": "index.js",
   "scripts": {
