@@ -1,14 +1,14 @@
 {
   "name": "hapi-bookshelf",
   "version": "0.0.1",
-  "description": "Hapi plugin for working with Bookshelf promises",
+  "description": "Hapi plugin for transforming Bookshelf into Boom errors",
   "main": "./src",
   "scripts": {
     "test": "lab ./test"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/valet-io/hapi-bookshelf"
+    "url": "https://github.com/bendrucker/hapi-bookshelf"
   },
   "keywords": [
     "hapi",
@@ -18,9 +18,9 @@
   "author": "Ben Drucker <bvdrucker@gmail.com> (http://www.bendrucker.me/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/valet-io/hapi-bookshelf/issues"
+    "url": "https://github.com/bendrucker/hapi-bookshelf/issues"
   },
-  "homepage": "https://github.com/valet-io/hapi-bookshelf",
+  "homepage": "https://github.com/bendrucker/hapi-bookshelf",
   "devDependencies": {
     "bookshelf": "~0.7.9",
     "code": "~1.2.1",
