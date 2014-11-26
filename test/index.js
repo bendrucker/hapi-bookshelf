@@ -28,7 +28,7 @@ describe('hapi-bookshelf', function () {
     done();
   });
 
-  function register (options) {
+  function register (options, callback) {
     server.pack.register({
       plugin: require('../'),
       options: options || {
@@ -36,10 +36,17 @@ describe('hapi-bookshelf', function () {
           Model: Model
         }
       }
-    }, function (err) {
+    }, callback || function (err) {
       if (err) throw err;
     });
   }
+
+  it('must be registered with a bookshelf options', function (done) {
+    register({}, function (err) {
+      expect(err.message).to.contain('Bookshelf instance must be passed');
+      done();
+    });
+  });
 
   it('turns NotFoundError into a 404', function (done) {
     register();
