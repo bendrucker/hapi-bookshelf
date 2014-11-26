@@ -29,5 +29,9 @@
   },
   "peerDependencies": {
     "bookshelf": "0.7"
+  },
+  "dependencies": {
+    "boom": "~2.6.1",
+    "hoek": "~2.9.0"
   }
 }
