@@ -2,9 +2,9 @@
   "name": "hapi-bookshelf",
   "version": "0.0.1",
   "description": "Hapi plugin for working with Bookshelf promises",
-  "main": "index.js",
+  "main": "./src",
   "scripts": {
-    "test": "lab test.js"
+    "test": "lab ./test"
   },
   "repository": {
     "type": "git",
@@ -22,11 +22,12 @@
   },
   "homepage": "https://github.com/valet-io/hapi-bookshelf",
   "devDependencies": {
-    "lab": "~1.5.0",
-    "hapi": "~2.1.2",
-    "bookshelf": "valet-io/bookshelf#161c4ad876f0d9977cb5bc68b324e44c8c0cc88c"
+    "bookshelf": "~0.7.9",
+    "code": "~1.2.1",
+    "hapi": "~7.5.2",
+    "lab": "~5.1.0"
   },
   "peerDependencies": {
-    "bookshelf": "0.x"
+    "bookshelf": "0.7"
   }
 }
