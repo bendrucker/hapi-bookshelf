@@ -1,6 +1,6 @@
 {
   "name": "hapi-bookshelf",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Hapi plugin for transforming Bookshelf into Boom errors",
   "main": "./src",
   "scripts": {
