@@ -23,15 +23,16 @@
   "homepage": "https://github.com/bendrucker/hapi-bookshelf",
   "devDependencies": {
     "bookshelf": "~0.7.9",
-    "code": "~1.2.1",
-    "hapi": "~7.5.2",
-    "lab": "~5.1.0"
+    "code": "^1.2.1",
+    "hapi": "^8.0.0-rc5",
+    "lab": "^5.1.0"
   },
   "peerDependencies": {
-    "bookshelf": "0.7"
+    "bookshelf": "0.7",
+    "hapi": "^8.0.0-rc5"
   },
   "dependencies": {
-    "boom": "~2.6.1",
-    "hoek": "~2.9.0"
+    "boom": "^2.6.1",
+    "hoek": "^2.9.0"
   }
 }

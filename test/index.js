@@ -11,6 +11,7 @@ describe('hapi-bookshelf', function () {
   var server;
   beforeEach(function (done) {
     server = new hapi.Server();
+    server.connection();
     server.route({
       method: 'GET',
       path: '/notfound',
@@ -25,12 +26,19 @@ describe('hapi-bookshelf', function () {
         reply(new Error('No rows were affected in the update, did you mean to pass the {method: "insert"} option?'));
       }
     });
+    server.route({
+      method: 'get',
+      path: '/normal',
+      handler: function (request, reply) {
+        reply('Normal');
+      }
+    });
     done();
   });
 
   function register (options, callback) {
-    server.pack.register({
-      plugin: require('../'),
+    server.register({
+      register: require('../'),
       options: options || {
         bookshelf: {
           Model: Model
@@ -63,6 +71,17 @@ describe('hapi-bookshelf', function () {
       url: '/norows'
     }, function (response) {
       expect(response.statusCode).to.equal(404);
+      done();
+    });
+  });
+
+  it('ignores other responses', function (done) {
+    register();
+    server.inject({
+      method: 'GET',
+      url: '/normal'
+    }, function (response) {
+      expect(response.payload).to.equal('Normal');
       done();
     });
   });
