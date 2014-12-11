@@ -11,6 +11,7 @@ describe('hapi-bookshelf', function () {
   var server;
   beforeEach(function (done) {
     server = new hapi.Server();
+    server.connection();
     server.route({
       method: 'GET',
       path: '/notfound',
@@ -29,8 +30,8 @@ describe('hapi-bookshelf', function () {
   });
 
   function register (options, callback) {
-    server.pack.register({
-      plugin: require('../'),
+    server.register({
+      register: require('../'),
       options: options || {
         bookshelf: {
           Model: Model

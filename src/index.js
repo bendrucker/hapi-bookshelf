@@ -3,13 +3,13 @@
 var hoek = require('hoek');
 var boom = require('boom');
 
-exports.register = function (plugin, options, next) {
+exports.register = function (server, options, next) {
   options = hoek.applyToDefaults({
     noRow: 'No rows were affected in the update, did you mean to pass the {method: "insert"} option?'
   }, options);
   var bookshelf = options.bookshelf;
   if (!bookshelf) return next(new Error('Bookshelf instance must be passed as "bookshelf"'));
-  plugin.ext('onPreResponse', function (request, reply) {
+  server.ext('onPreResponse', function (request, reply) {
     if (request.response instanceof bookshelf.Model.NotFoundError) {
       return reply(boom.notFound());
     }
