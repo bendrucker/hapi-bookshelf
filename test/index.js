@@ -26,6 +26,13 @@ describe('hapi-bookshelf', function () {
         reply(new Error('No rows were affected in the update, did you mean to pass the {method: "insert"} option?'));
       }
     });
+    server.route({
+      method: 'GET',
+      path: '/normal',
+      handler: function (request, reply) {
+        reply('Normal');
+      }
+    });
     done();
   });
 
@@ -64,6 +71,14 @@ describe('hapi-bookshelf', function () {
       url: '/norows'
     }, function (response) {
       expect(response.statusCode).to.equal(404);
+      done();
+    });
+  });
+
+  it('ignores other replies', function (done) {
+    register();
+    server.inject('/normal', function (response) {
+      expect(response.result).to.equal('Normal');
       done();
     });
   });

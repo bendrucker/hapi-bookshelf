@@ -17,7 +17,7 @@ exports.register = function (server, options, next) {
       return reply(boom.notFound());
     }
     else {
-      return reply();
+      return reply.continue();
     }
   });
   next();
